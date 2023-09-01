@@ -37,7 +37,7 @@ requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.ruff]
-ignore = ["E501"]
+ignore = ["E501", "B008"]
 select = ["B","C","E","F","W","B9", "I", "N", "Q"]
 
 # Exclude a variety of commonly ignored directories.

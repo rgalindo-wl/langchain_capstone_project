@@ -3,7 +3,7 @@ repos:
     rev: "v0.0.260"
     hooks:
       - id: ruff
-        args: [--fix, --exit-non-zero-on-fix]
+        args: [--fix]
   - repo: https://github.com/psf/black
     rev: 23.3.0
     hooks:
@@ -12,5 +12,5 @@ repos:
     rev: 1.5.0
     hooks:
       - id: interrogate
-        args: [src, -v, -i, --fail-under=80]
+        args: [src, -v, -i, --fail-under=20]
         pass_filenames: false

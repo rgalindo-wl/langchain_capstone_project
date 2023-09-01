@@ -1,21 +1,19 @@
-.PHONY: tests docs
+.PHONY: api env
 
 dependencies: 
-	@echo "Initializing Git..."
-	git init
 	@echo "Installing dependencies..."
 	poetry install
 	poetry run pre-commit install
 
-env: dependencies
+conf:
+	cp .env.example .env
+
+env:
 	@echo "Activating virtual environment..."
 	poetry shell
 
-tests:
-	pytest
 
-docs:
-	@echo Save documentation to docs... 
-	pdoc src -o docs --force
-	@echo View API documentation... 
-	pdoc src --http localhost:8080	
+
+api:
+	@echo "Running server for the API"
+	poetry run uvicorn src.main:app --reload --host "localhost" --port 8000

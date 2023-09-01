@@ -12,8 +12,6 @@ env:
 	@echo "Activating virtual environment..."
 	poetry shell
 
-
-
 api:
 	@echo "Running server for the API"
 	poetry run uvicorn src.main:app --reload --host "localhost" --port 8000

@@ -1,4 +1,4 @@
-# Langchain capstone project
+# PDF document guru app (RAG implementation)
 
 Capstone project for Wizeline Langchain sprint
 
